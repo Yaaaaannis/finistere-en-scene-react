@@ -1,3 +1,12 @@
+body {
+  font-family: 'Lora', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+}
+
 .App {
   text-align: center;
 }
@@ -34,5 +43,71 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Styles pour rendre le calendrier responsive */
+.fc-container {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.fc {
+  min-width: 300px;
+}
+
+/* Ajustements pour mobile */
+@media (max-width: 768px) {
+  .fc .fc-toolbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .fc .fc-toolbar-title {
+    font-size: 1.2em;
+  }
+
+  .fc .fc-button {
+    padding: 0.2em 0.4em;
+    font-size: 0.9em;
+  }
+
+  .fc .fc-daygrid-day-number {
+    font-size: 0.9em;
+  }
+}
+
+/* Ajoutez ceci dans votre fichier CSS global */
+.calendar-container .fc {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .calendar-container .fc {
+    font-size: 0.7rem;
+  }
+
+  .calendar-container .fc .fc-toolbar-title {
+    font-size: 1em;
+  }
+
+  .calendar-container .fc .fc-button {
+    padding: 0.2em 0.4em;
+    font-size: 0.8em;
+  }
+
+  .calendar-container .fc-view {
+    padding: 0;
+  }
+
+  .calendar-container .fc td, 
+  .calendar-container .fc th {
+    padding: 1px !important;
+  }
+
+  .calendar-container .fc-daygrid-day-number {
+    padding: 2px;
+    font-size: 0.8em;
   }
 }
